@@ -5,9 +5,7 @@
 extern keymap_config_t keymap_config;
 
 #define _QWERTY 0
-#define _LOWER 1
-#define _RAISE 2
-#define _ADJUST 16
+#define _RAISE 1
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
@@ -35,33 +33,40 @@ enum custom_keycodes {
 #define LSPO_KEY KC_LEFT_CURLY_BRACE
 #define RSPC_KEY KC_RIGHT_CURLY_BRACE
 
+#define KC_ZALT MT(MOD_LALT, KC_Z)
+#define KC_EGUI MT(MOD_LGUI, KC_ENT)
+#define KC_TCTL MT(MOD_LCTL, KC_GRAVE)
+
+
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = KC_KEYMAP(
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
-     ESC , 1  , 2  , 3  , 4  , 5  ,                6  , 7  , 8  , 9  , 0  , -  ,
+     ESC , 1  , 2  , 3  , 4  , 5  ,                6  , 7  , 8  , 9  , 0  , MINUS ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-     TILD, Q  , W  , E  , R  , T  ,                Y  , U  , I  , O  , P  , [  ,
+     TAB , Q  , W  , E  , R  , T  ,                Y  , U  , I  , O  , P  , LBRACKET  ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-     TAB , A  , S  , D  , F  , G  ,                H  , J  , K  , L  ,SCLN,QUOT,
+     RASE, A  , S  , D  , F  , G  ,                H  , J  , K  , L  ,SCLN,QUOT,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-     LSPO, Z  , X  , C  , V  , B  ,BSPC,     ENT , N  , M  ,COMM,DOT ,SLSH,RSPC,
+     LSFT,ZALT, X  , C  , V  , B  ,    ,         , N  , M  ,COMM,DOT ,SLSH,RASE,
   //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
-             CTL_T(KC_RASE),LALT,LGUI,         SPC ,MEH ,RGHT
+                       TCTL,EGUI,BSPC,         SPC ,    ,    
   //                  `----+----+----'        `----+----+----'
   ),
 
   [_RAISE] = KC_KEYMAP(
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
-         ,    ,    ,    ,    ,RST ,                   ,    ,    ,    , \  , =  ,
+         ,    ,    ,    ,    ,    ,                   ,    ,   ,   ,BSLASH,EQUAL,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-         ,    ,MS_L,MS_D,MS_U,MS_R,               LEFT,DOWN, UP ,RGHT,    ,  ] ,
+         ,MUTE,    ,    ,    ,    ,                   ,    ,    , UP ,QUOT,RBRACKET,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-         ,    ,    ,BTN1,BTN2,    ,                   ,    ,    ,    ,    ,    ,
+         ,VOLU,    ,    ,    ,    ,                   ,    ,LEFT,DOWN,RGHT,    ,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-         ,    ,    ,    ,    ,    ,MPLY     ,VOLU,    ,    ,    ,    ,    ,
+         ,VOLD,MRWD,MFFD,MPLY,    ,         ,    ,    ,    ,    ,    ,    ,    ,
   //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
-                      MRWD,MFFD,MUTE,        VOLD,    ,    
+                           ,     ,    ,            ,    ,
   //                  `----+----+----'        `----+----+----'
   )
 
