@@ -26,9 +26,13 @@ enum {
 
 #define KC_TD TD
 
+/// https://docs.qmk.fm/keycodes
+
+// Hold OPTION-ARROW
 #define KC_WLFT LALT(KC_LEFT) // WORD LEFT
 #define KC_WRHT LALT(KC_RIGHT) // WORD RIGHT
 
+// Some XCode specific items. I don't expect them to be useful to you, but left 'em to inspire the mind
 #define KC_CCRL LCTL(KC_GRAVE) // XCode - Change Editor
 #define KC_CLAE HYPR(KC_GRAVE) // XCode - Close Editor
 #define KC_XBCK LCTL(LGUI(KC_LEFT)) // XCode - History Back
@@ -38,7 +42,7 @@ enum {
 
 #define KC_LOCK LGUI(LCTL(KC_Q)) // Lock the screen
 #define KC_SCST SHOT_MACRO // Screenshot Macro
-#define KC_FCS HYPR(KC_F)
+#define KC_FCS HYPR(KC_F) // Macro to trigger Focus App
 
 //Tap Dance Definitions
 // qk_tap_dance_action_t tap_dance_actions[] = {
@@ -70,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
          ,MUTE,MRWD,MFFD,MPLY,    ,                   ,    ,    ,    ,BSLASH,EQUAL,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-         ,VOLU,    ,    ,    ,    ,                   ,WLFT, UP ,WRHT,    ,RBRACKET,
+     CAPS,VOLU,    ,    ,    ,    ,                   ,WLFT, UP ,WRHT,    ,RBRACKET,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
          ,VOLD,SCST,    ,    ,    ,                   ,LEFT,DOWN,RGHT,    ,CLAE,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
@@ -86,9 +90,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
          ,    ,    ,    ,    ,    ,                   ,    ,    ,    ,    ,    ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-         ,    ,    ,    ,    ,    ,                   ,    ,    ,    ,    ,    ,
+         ,    ,    ,    ,    ,    ,                   ,    ,    ,HOME,PGUP,    ,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-         ,    ,    ,   ,     ,    ,         ,    ,    ,    , FCS,    ,BTN2,LOCK,
+         ,    ,    ,   ,     ,    ,         ,    ,    ,    , FCS, END,PGDN,LOCK,
   //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
                            ,     ,    ,            ,    ,    
   //                  `----+----+----'        `----+----+----'
