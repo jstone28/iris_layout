@@ -62,9 +62,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
      TAB , Q  , W  , E  , R  , T  ,                Y  , U  , I  , O  , P  ,LBRACKET,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-     RASE, A  , S  , D  , F  , G  ,                H  , J  , K  , L  ,SCLN,QUOT,
+     BSPC, A  , S  , D  , F  , G  ,                H  , J  , K  , L  ,SCLN,QUOT,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-     LSFT, Z  , X  , C  , V  , B  ,BSPC,          , N  , M  ,COMM,DOT ,SLSH,LALT,
+     LSFT, Z  , X  , C  , V  , B  ,RASE,          , N  , M  ,COMM,DOT ,SLSH,LALT,
   //`i----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
                        TCTL,LGUI,ENT,          SPC ,LEFT,RIGHT
   //                  `----+----+----'        `----+----+----'
