@@ -58,21 +58,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   KC_KEYMAP(
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
-     ESC , 1  , 2  , 3  , 4  , 5  ,                6  , 7  , 8  , 9  ,  0 ,MINUS,
+     ESC , 1  , 2  , 3  , 4  , 5  ,                6  , 7  , 8  , 9  , 0  ,MINUS,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
      TAB , Q  , W  , E  , R  , T  ,                Y  , U  , I  , O  , P  ,LBRACKET,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-     BSPC, A  , S  , D  , F  , G  ,                H  , J  , K  , L  ,SCLN,QUOT,
+     BSPC, A  , S  , D  , F  , G  ,                H  , J  , K  , L  ,SCLN,ENT ,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-     LSFT, Z  , X  , C  , V  , B  ,RASE,          , N  , M  ,COMM,DOT ,SLSH,LALT,
+     LSFT, Z  , X  , C  , V  , B  ,QUOT,          , N  , M  ,COMM,DOT ,SLSH,RASE,
   //`i----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
-                       TCTL,LGUI,ENT,          SPC ,LEFT,RIGHT
+                       TCTL,LALT,LGUI,          SPC ,LEFT,RIGHT
   //                  `----+----+----'        `----+----+----'
   ),
 
   KC_KEYMAP(
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
-         ,MUTE,MRWD,MFFD,MPLY,    ,                   ,    ,    ,TILD,BSLASH,EQUAL,
+         ,MUTE,MRWD,MFFD,MPLY,    ,                   ,    ,QUOT,TILD,BSLASH,EQUAL,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
      CAPS,VOLU,    ,    ,    ,    ,                   ,WLFT, UP ,WRHT,    ,RBRACKET,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
